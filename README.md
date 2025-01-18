@@ -23,7 +23,7 @@
 </pre>
 
 
-Light ball is a terminal app which generates an animation of a light revolving around a sphere.
+Light ball is a terminal app for linux which generates an animation of a light revolving around a sphere.
 
 # Building
 
