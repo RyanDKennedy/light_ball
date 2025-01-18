@@ -78,7 +78,7 @@ int main(int argc, char **argv)
 	int opt_char;
 	int option_index;
 	
-	while ((opt_char = getopt_long(argc, argv, "f:w:h:r:a:o:", long_options, &option_index)) != -1)
+	while ((opt_char = getopt_long(argc, argv, "f:w:h:r:a:o:t:", long_options, &option_index)) != -1)
 	{
 	    const char *name = long_options[option_index].name;
 
@@ -224,10 +224,10 @@ int main(int argc, char **argv)
     // Use the args to calculate other values
     {
 	// circle position
+	g_circle_radius = arg_circle_radius;
 	g_circle_x = arg_term_width / 2;
 	g_circle_y = arg_term_height / 2;
-	g_circle_z = arg_term_width / 2;
-	g_circle_radius = arg_circle_radius;
+	g_circle_z = g_circle_radius + 1;
 	
 	// light starting position
 	g_initial_light_x = g_circle_x;
